@@ -21,26 +21,23 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 
-#alias ls='ls --color=auto'
-alias ls='lsd'
-alias ll='lsd -l'
-alias lh='lsd -lah'
-alias grep='grep --colour=auto'
-alias egrep='egrep --colour=auto'
-alias fgrep='fgrep --colour=auto'
-alias cp="cp -i"             # confirm before overwriting something
-alias lg='lazygit'
-alias code='vscodium'
+#alias ls="ls --color=auto"
+alias ls="lsd"
+alias ll="lsd -l" alias lh="lsd -lah"
+alias grep="grep --colour=auto"
+alias egrep="egrep --colour=auto"
+alias fgrep="fgrep --colour=auto"
+alias cp="cp -i"
+alias rm="rm -i"
+alias lg="lazygit"
 # Removing unsed packages (orphans)
-alias autoremove='sudo pacman -Rns $(pacman -Qtdq)'
-# Run vpngate-with-proxy
-alias vpngate='/home/sean/Tools/vpngate-with-proxy/run'
-# Run ani-cli
-alias ani-cli='/home/sean/Tools/ani-cli/ani-cli'
-# Run pokemon-colorscripts-git print random pokemon
-alias pokemon='pokemon-colorscripts -r'
+alias autoremove="sudo pacman -Rns $(pacman -Qtdq)"
 # Launch Neovim
-alias v='nvim'
+alias v="nvim"
+# Launch ani-cli with best quality
+alias ani="ani-cli -q best"
+# copy text to clipboard with xclip
+alias xc="xclip -sel c"
 
 # Default text editor
 EDITOR=/usr/bin/nvim
