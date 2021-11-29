@@ -2,6 +2,7 @@
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 
 " Declare the list of plugins.
+Plug 'morhetz/gruvbox'
 "Plug 'tpope/vim-sensible'
 "Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 "Plug 'cohama/lexima.vim'
