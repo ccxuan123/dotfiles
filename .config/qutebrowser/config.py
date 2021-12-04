@@ -10,6 +10,11 @@ config.set("colors.webpage.preferred_color_scheme", "dark")
 # Require `python-adblock` package
 config.set("content.blocking.method", "both")
 
+# Custom Keybindings
+config.bind(',m', 'spawn mpv {url}')
+config.bind(',M', 'hint links spawn mpv {hint-url}')
+
+
 # base16-qutebrowser (https://github.com/theova/base16-qutebrowser)
 # Base16 qutebrowser template by theova
 # Gruvbox dark, medium scheme by Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
