@@ -20,28 +20,45 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-
-#alias ls="ls --color=auto"
-alias ls="lsd"
-alias ll="lsd -l" alias lh="lsd -lah"
-alias grep="grep --colour=auto"
-alias egrep="egrep --colour=auto"
-alias fgrep="fgrep --colour=auto"
-alias cp="cp -i"
-alias rm="rm -i"
-alias lg="lazygit"
-# Removing unsed packages (orphans)
-alias autoremove="sudo pacman -Rns $(pacman -Qtdq)"
-# Launch Neovim
-alias v="nvim"
-# Launch ani-cli with best quality
-alias ani="ani-cli -q best"
-# copy text to clipboard with xclip
-alias xc="xclip -sel c"
-
 # Default text editor
 EDITOR=/usr/bin/nvim
 SUDO_EDITOR=/usr/bin/nvim
+
+################################################################
+#  Aliases
+################################################################
+# Replace ls with lsd
+alias ls="lsd"
+alias ll="lsd -l" alias lh="lsd -lah"
+#alias ls="ls --color=auto"
+
+alias grep="grep --colour=auto"
+alias egrep="egrep --colour=auto"
+alias fgrep="fgrep --colour=auto"
+
+# Enable prompt when delete or overwrite files
+alias cp="cp -i"
+alias rm="rm -i"
+alias lg="lazygit"
+
+# Removing unsed packages (orphans)
+alias autoremove="sudo pacman -Rns $(pacman -Qtdq)"
+
+# Launch Neovim
+alias v="nvim"
+
+# Launch ani-cli with best quality
+alias ani="ani-cli -q best"
+
+# copy text to clipboard with xclip
+alias xc="xclip -sel c"
+
+# Switch audio to hdmi
+alias audio-hdmi="pactl set-card-profile alsa_card.pci-0000_00_1f.3 output:hdmi-stereo"
+
+# Switch audio to laptop
+alias audio-laptop="pactl set-card-profile alsa_card.pci-0000_00_1f.3 output:analog-stereo+input:analog-stereo"
+
 
 # # ex - archive extractor
 # # usage: ex <file>
