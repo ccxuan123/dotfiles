@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="favicon.png" rel="shortcut icon" type="image/x-icon" />
+</head>
+<body>
+    <div id="search">
+        <input id="search-field" type="text" name="search-field" onkeypress="return search(event)"/>
+    </div>
+    <div class="container">
+        <div id="clock"></div>
+        <div class="weather-container">
+            <div class="row">
+                <div id="weather-description"class="inline"></div>
+                <div class="inline">-</div>
+                <div id="temp" class="inline"></div>
+            </div>
+        </div>
+        <div class="bookmark-container">
+            <div class="bookmark-set">
+                <div class="bookmark-title">Daily</div>
+                <div class="bookmark-inner-container">
+                    <a class="bookmark" href="https://inbox.google.com/" target="_blank">Inbox</a>
+                    <a class="bookmark" href="https://drive.google.com/" target="_blank">Drive</a>
+                    <a class="bookmark" href="https://twitter.com" target="_blank">Twitter</a>
+                </div>
+            </div>
+            <div class="bookmark-set">
+                <div class="bookmark-title">Media</div>
+                <div class="bookmark-inner-container">
+                    <a class="bookmark" href="https://youtube.com" target="_blank">Youtube</a>
+                    <a class="bookmark" href="https://odysee.com" target="_blank">Odysee</a>
+                    <a class="bookmark" href="https://animixplay.to" target="_blank">Animixplay</a>
+                    <a class="bookmark" href="https://www.bilibili.com" target="_blank">Bilibili</a>
+                </div>
+            </div>
+            <div class="bookmark-set">
+            <div class="bookmark-title">Reddit</div>
+                <div class="bookmark-inner-container">
+                    <a class="bookmark" href="https://reddit.com/r/unixporn" target="_blank">/r/unixporn</a>
+                    <a class="bookmark" href="https://reddit.com/r/linux" target="_blank">/r/linux</a>
+                    <a class="bookmark" href="https://reddit.com/r/malaysia" target="_blank">/r/malaysia</a>
+                    <a class="bookmark" href="https://reddit.com/r/news" target="_blank">/r/news</a>
+                </div>
+            </div>
+            <div class="bookmark-set">
+                <div class="bookmark-title">Tech</div>
+                <div class="bookmark-inner-container">
+                    <a class="bookmark" href="https://github.com" target="_blank">GitHub</a>
+                    <a class="bookmark" href="https://wiki.archlinux.org" target="_blank">Arch Wiki</a>
+                    <a class="bookmark" href="https://wiki.manjaro.org" target="_blank">Manjaro Wiki</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Search on enter key event
+        function search(e) {
+            if (e.keyCode == 13) {
+                var val = document.getElementById("search-field").value;
+                window.open("https://google.com/search?q=" + val);
+            }
+        }
+        // Get current time and format
+        function getTime() {
+            let date = new Date(),
+                min = date.getMinutes(),
+                sec = date.getSeconds(),
+                hour = date.getHours();
+
+            return "" + 
+                (hour < 10 ? ("0" + hour) : hour) + ":" + 
+                (min < 10 ? ("0" + min) : min) + ":" + 
+                (sec < 10 ? ("0" + sec) : sec);
+        }
+
+        function getWeatherDate() {
+            let date = new Date(),
+                year = date.getFullYear(),
+                month = date.getMonth(),  //month count from 0 to 11
+                day = date.getDate();
+
+            return year + "-" + (month+1) + "-" + day
+        }
+        
+
+        function getWeather(){
+            // Use MET Malaysia API
+            let date = getWeatherDate();
+            let url = "https://api.met.gov.my/v2/data?datasetid=FORECAST&datacategoryid=GENERAL&locationid=LOCATION:237&start_date="
+                    + date 
+                    + "&end_date=" 
+                    + date ;
+            console.log(url);
+
+            let xhr = new XMLHttpRequest();
+            xhr.open("GET", url);
+
+            xhr.setRequestHeader("Authorization", "METToken 877b8d75811641e4043174d66d20957726394ec7");
+
+            xhr.onload = () => {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        let json = JSON.parse(xhr.responseText);
+                        console.log(json);
+                        document.getElementById("temp").innerHTML = json.results[2].value.toFixed(0) + " °C";
+                        document.getElementById("weather-description").innerHTML = json.results[0].value;
+                    } else {
+                        console.log('error msg: ' + xhr.status);
+                    }
+                }
+            };
+            xhr.send();
+        }
+
+        window.onload = () => {
+            getWeather()
+            getWeatherDate()
+            // Set up the clock
+            document.getElementById("clock").innerHTML = getTime();
+            // Set clock interval to tick clock
+            setInterval( () => {
+                document.getElementById("clock").innerHTML = getTime();
+            },100);
+        }
+
+        document.addEventListener("keydown", event => {
+            if (event.keyCode == 32) {          // Spacebar code to open search
+                document.getElementById('search').style.display = 'flex';
+                document.getElementById('search-field').focus();
+            } else if (event.keyCode == 27) {   // Esc to close search
+                document.getElementById('search-field').value = '';
+                document.getElementById('search-field').blur();
+                document.getElementById('search').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
