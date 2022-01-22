@@ -1,0 +1,147 @@
+[ColorEffects:Disabled]
+Color=56,56,56                             
+ColorAmount=0
+ColorEffect=0
+ContrastAmount=0.65
+ContrastEffect=1
+IntensityAmount=0.1
+IntensityEffect=2
+
+[ColorEffects:Inactive]
+ChangeSelectionColor=true
+Color=110, 108, 126                        
+ColorAmount=0.025
+ColorEffect=2
+ContrastAmount=0.1
+ContrastEffect=2
+Enable=false
+IntensityAmount=0
+IntensityEffect=0
+
+[Colors:Button]
+BackgroundAlternate=181, 232, 224          
+BackgroundNormal=49,54,59
+DecorationFocus=137, 220, 235              
+DecorationHover=137, 220, 235              
+ForegroundActive=137, 220, 235             
+ForegroundInactive=152, 139, 162           
+ForegroundLink=150, 205, 251               
+ForegroundNegative=242,143,173             
+ForegroundNeutral=248, 189, 150            
+ForegroundNormal=252,252,252               
+ForegroundPositive=171,233,179             
+ForegroundVisited=201, 203, 255            
+
+[Colors:Complementary]
+BackgroundAlternate=181, 232, 224          
+BackgroundNormal=42,46,50
+DecorationFocus=137, 220, 235              
+DecorationHover=137, 220, 235              
+ForegroundActive=137, 220, 235             
+ForegroundInactive=152, 139, 162           
+ForegroundLink=150, 205, 251               
+ForegroundNegative=242,143,173             
+ForegroundNeutral=248, 189, 150            
+ForegroundNormal=252,252,252               
+ForegroundPositive=171,233,179             
+ForegroundVisited=201, 203, 255            
+
+[Colors:Header]
+BackgroundAlternate=42,46,50
+BackgroundNormal=49,54,59
+DecorationFocus=137, 220, 235              
+DecorationHover=137, 220, 235              
+ForegroundActive=137, 220, 235             
+ForegroundInactive=152, 139, 162           
+ForegroundLink=150, 205, 251               
+ForegroundNegative=242,143,173             
+ForegroundNeutral=248, 189, 150            
+ForegroundNormal=252,252,252               
+ForegroundPositive=171,233,179             
+ForegroundVisited=201, 203, 255            
+
+[Colors:Header][Inactive]
+BackgroundAlternate=49,54,59
+BackgroundNormal=42,46,50
+DecorationFocus=137, 220, 235              
+DecorationHover=137, 220, 235              
+ForegroundActive=137, 220, 235             
+ForegroundInactive=152, 139, 162           
+ForegroundLink=150, 205, 251               
+ForegroundNegative=242,143,173             
+ForegroundNeutral=248, 189, 150            
+ForegroundNormal=252,252,252               
+ForegroundPositive=171,233,179             
+ForegroundVisited=201, 203, 255            
+
+[Colors:Selection]
+BackgroundAlternate=181, 232, 224          
+BackgroundNormal=137, 220, 235             
+DecorationFocus=137, 220, 235              
+DecorationHover=137, 220, 235              
+ForegroundActive=252,252,252               
+ForegroundInactive=152, 139, 162           
+ForegroundLink=250,227,176                 
+ForegroundNegative=242,143,173             
+ForegroundNeutral=248, 189, 150            
+ForegroundNormal=252,252,252               
+ForegroundPositive=171,233,179             
+ForegroundVisited=201, 203, 255            
+
+[Colors:Tooltip]
+BackgroundAlternate=42,46,50
+BackgroundNormal=49,54,59
+DecorationFocus=137, 220, 235              
+DecorationHover=137, 220, 235              
+ForegroundActive=137, 220, 235             
+ForegroundInactive=152, 139, 162           
+ForegroundLink=150, 205, 251               
+ForegroundNegative=242,143,173             
+ForegroundNeutral=248, 189, 150            
+ForegroundNormal=252,252,252               
+ForegroundPositive=171,233,179             
+ForegroundVisited=201, 203, 255            
+
+[Colors:View]
+BackgroundAlternate=35,38,41
+BackgroundNormal=27,30,32                  
+DecorationFocus=137, 220, 235              
+DecorationHover=137, 220, 235              
+ForegroundActive=137, 220, 235             
+ForegroundInactive=152, 139, 162           
+ForegroundLink=150, 205, 251               
+ForegroundNegative=242,143,173             
+ForegroundNeutral=248, 189, 150            
+ForegroundNormal=252,252,252               
+ForegroundPositive=171,233,179             
+ForegroundVisited=201, 203, 255            
+
+[Colors:Window]
+BackgroundAlternate=49,54,59
+BackgroundNormal=42,46,50
+DecorationFocus=137, 220, 235              
+DecorationHover=137, 220, 235              
+ForegroundActive=137, 220, 235             
+ForegroundInactive=152, 139, 162           
+ForegroundLink=150, 205, 251               
+ForegroundNegative=242,143,173             
+ForegroundNeutral=248, 189, 150            
+ForegroundNormal=252,252,252               
+ForegroundPositive=171,233,179             
+ForegroundVisited=201, 203, 255            
+
+[General]
+ColorScheme=Catppuccin-dev
+Name=Catppuccin-deb
+shadeSortColumn=true
+
+[KDE]
+contrast=4
+
+[WM]
+activeBackground=49,54,59
+activeBlend=252,252,252                    
+activeForeground=252,252,252               
+inactiveBackground=42,46,50
+inactiveBlend=152, 139, 162                
+inactiveForeground=152, 139, 162           

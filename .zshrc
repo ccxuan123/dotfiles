@@ -11,10 +11,7 @@ USE_POWERLINE="true"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Source manjaro-zsh-configuration
-if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
-  source /usr/share/zsh/manjaro-zsh-config
-fi
+
 #####################################################################
 # Options Section
 #####################################################################
@@ -31,6 +28,9 @@ setopt autocd                                                   # if only direct
 setopt inc_append_history                                       # save commands are added to the history immediately, otherwise only when shell exits.
 setopt histignorespace                                          # Don't save commands that start with space
 
+autoload -Uz compinit && compinit                               # Enable auto-completion system
+
+zstyle ':completion:*' menu select                              # Autocompletion with menu, press Tab twice to activate
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'       # Case insensitive tab completion
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"         # Colored completion (different colors for dirs/files/etc)
 zstyle ':completion:*' rehash true                              # automatically find new executables in path 
@@ -46,6 +46,7 @@ SAVEHIST=10000
 export EDITOR=/usr/bin/nvim
 export SUDO_EDITOR=/usr/bin/nvim
 
+
 #####################################################################
 # zsh plugin
 #####################################################################
@@ -60,14 +61,16 @@ bindkey "$terminfo[kcud1]" history-substring-search-down
 bindkey '^[[A' history-substring-search-up			
 bindkey '^[[B' history-substring-search-down
 
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+#source ~/powerlevel10k/powerlevel10k.zsh-theme
+source /usr/share/zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-extract/extract.plugin.zsh
 
-# Use manjaro zsh prompt
-#if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
-#  source /usr/share/zsh/manjaro-zsh-prompt
-#fi
+################################################################
+#  Bind keys
+################################################################
+bindkey '^[[H' beginning-of-line
+bindkey '^[[F' end-of-line
+
 
 ################################################################
 #  Aliases
@@ -91,18 +94,14 @@ alias autoremove="sudo pacman -Rns $(pacman -Qtdq)"
 # Launch Neovim
 alias v="nvim"
 
-# Launch ani-cli with best quality
-alias ani="ani-cli -q high"
-
 # copy text to clipboard with xclip
 alias xc="xclip -sel c"
+
+# Launch carla jack
+alias pw-carla="pw-jack carla-rack"
 
 # Switch audio to hdmi
 alias audio-hdmi="pactl set-card-profile alsa_card.pci-0000_00_1f.3 output:hdmi-stereo"
 
 # Switch audio to laptop
 alias audio-laptop="pactl set-card-profile alsa_card.pci-0000_00_1f.3 output:analog-stereo+input:analog-stereo"
-
-# Neofetch with custom ascii art
-# alias neofetch="neofetch --ascii ~/.config/neofetch/komi_ascii.txt"
-

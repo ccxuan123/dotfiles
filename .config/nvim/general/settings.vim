@@ -33,6 +33,12 @@ set nobackup
 " No swap
 set noswapfile
 
+" Split new window at below
+set splitbelow
+
+" Split new window at right
+set splitright
+
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " => Status Line
 """""""""""""""""""""""""""""""""""""""""""""""""""
@@ -62,9 +68,9 @@ set fileencoding=utf-8
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " => Color & Theme
 """""""""""""""""""""""""""""""""""""""""""""""""""
-" Enable gruvbox colorscheme
-" vim-plug 'morhetz/gruvbox'
-autocmd vimenter * ++nested colorscheme gruvbox
+" Enable catppuccin colorscheme
+" Plug 'catppuccin/nvim', {'as': 'catppuccin'}
+autocmd vimenter * ++nested colorscheme catppuccin
 
 " Enables syntax highlighing
 syntax enable

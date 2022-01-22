@@ -1,0 +1,147 @@
+[ColorEffects:Disabled]
+Color=rgb(56,56,56)                             
+ColorAmount=0
+ColorEffect=0
+ContrastAmount=0.65
+ContrastEffect=1
+IntensityAmount=0.1
+IntensityEffect=2
+
+[ColorEffects:Inactive]
+ChangeSelectionColor=true
+Color=rgb(110, 108, 126)                        --gray 0
+ColorAmount=0.025
+ColorEffect=2
+ContrastAmount=0.1
+ContrastEffect=2
+Enable=false
+IntensityAmount=0
+IntensityEffect=0
+
+[Colors:Button]
+BackgroundAlternate=rgb(181, 232, 224)          --teal
+BackgroundNormal=rgb(49,54,59)
+DecorationFocus=rgb(137, 220, 235)              --sky
+DecorationHover=rgb(137, 220, 235)              --sky
+ForegroundActive=rgb(137, 220, 235)             --sky
+ForegroundInactive=rgb(152, 139, 162)           --gray 1
+ForegroundLink=rgb(150, 205, 251)               --blue
+ForegroundNegative=rgb(242,143,173)             --red
+ForegroundNeutral=rgb(248, 189, 150)            --peach
+ForegroundNormal=rgb(252,252,252)               --white
+ForegroundPositive=rgb(171,233,179)             --green dull
+ForegroundVisited=rgb(201, 203, 255)            --lavender
+
+[Colors:Complementary]
+BackgroundAlternate=rgb(181, 232, 224)          --teal
+BackgroundNormal=rgb(42,46,50)
+DecorationFocus=rgb(137, 220, 235)              --sky
+DecorationHover=rgb(137, 220, 235)              --sky
+ForegroundActive=rgb(137, 220, 235)             --sky
+ForegroundInactive=rgb(152, 139, 162)           --gray 1
+ForegroundLink=rgb(150, 205, 251)               --blue
+ForegroundNegative=rgb(242,143,173)             --red
+ForegroundNeutral=rgb(248, 189, 150)            --peach
+ForegroundNormal=rgb(252,252,252)               --white
+ForegroundPositive=rgb(171,233,179)             --green dull
+ForegroundVisited=rgb(201, 203, 255)            --lavender
+
+[Colors:Header]
+BackgroundAlternate=rgb(42,46,50)
+BackgroundNormal=rgb(49,54,59)
+DecorationFocus=rgb(137, 220, 235)              --sky
+DecorationHover=rgb(137, 220, 235)              --sky
+ForegroundActive=rgb(137, 220, 235)             --sky
+ForegroundInactive=rgb(152, 139, 162)           --gray 1
+ForegroundLink=rgb(150, 205, 251)               --blue
+ForegroundNegative=rgb(242,143,173)             --red
+ForegroundNeutral=rgb(248, 189, 150)            --peach
+ForegroundNormal=rgb(252,252,252)               --white
+ForegroundPositive=rgb(171,233,179)             --green dull
+ForegroundVisited=rgb(201, 203, 255)            --lavender
+
+[Colors:Header][Inactive]
+BackgroundAlternate=rgb(49,54,59)
+BackgroundNormal=rgb(42,46,50)
+DecorationFocus=rgb(137, 220, 235)              --sky
+DecorationHover=rgb(137, 220, 235)              --sky
+ForegroundActive=rgb(137, 220, 235)             --sky
+ForegroundInactive=rgb(152, 139, 162)           --gray 1
+ForegroundLink=rgb(150, 205, 251)               --blue
+ForegroundNegative=rgb(242,143,173)             --red
+ForegroundNeutral=rgb(248, 189, 150)            --peach
+ForegroundNormal=rgb(252,252,252)               --white
+ForegroundPositive=rgb(171,233,179)             --green dull
+ForegroundVisited=rgb(201, 203, 255)            --lavender
+
+[Colors:Selection]
+BackgroundAlternate=rgb(181, 232, 224)          --teal
+BackgroundNormal=rgb(137, 220, 235)             --sky
+DecorationFocus=rgb(137, 220, 235)              --sky
+DecorationHover=rgb(137, 220, 235)              --sky
+ForegroundActive=rgb(252,252,252)               --white
+ForegroundInactive=rgb(152, 139, 162)           --gray 1
+ForegroundLink=rgb(250,227,176)                 --yellow / light peach
+ForegroundNegative=rgb(242,143,173)             --red
+ForegroundNeutral=rgb(248, 189, 150)            --peach
+ForegroundNormal=rgb(252,252,252)               --white
+ForegroundPositive=rgb(171,233,179)             --green dull
+ForegroundVisited=rgb(201, 203, 255)            --lavender
+
+[Colors:Tooltip]
+BackgroundAlternate=rgb(42,46,50)
+BackgroundNormal=rgb(49,54,59)
+DecorationFocus=rgb(137, 220, 235)              --sky
+DecorationHover=rgb(137, 220, 235)              --sky
+ForegroundActive=rgb(137, 220, 235)             --sky
+ForegroundInactive=rgb(152, 139, 162)           --gray 1
+ForegroundLink=rgb(150, 205, 251)               --blue
+ForegroundNegative=rgb(242,143,173)             --red
+ForegroundNeutral=rgb(248, 189, 150)            --peach
+ForegroundNormal=rgb(252,252,252)               --white
+ForegroundPositive=rgb(171,233,179)             --green dull
+ForegroundVisited=rgb(201, 203, 255)            --lavender
+
+[Colors:View]
+BackgroundAlternate=rgb(35,38,41)
+BackgroundNormal=rgb(27,30,32)                  
+DecorationFocus=rgb(137, 220, 235)              --sky
+DecorationHover=rgb(137, 220, 235)              --sky
+ForegroundActive=rgb(137, 220, 235)             --sky
+ForegroundInactive=rgb(152, 139, 162)           --gray 1
+ForegroundLink=rgb(150, 205, 251)               --blue
+ForegroundNegative=rgb(242,143,173)             --red
+ForegroundNeutral=rgb(248, 189, 150)            --peach
+ForegroundNormal=rgb(252,252,252)               --white
+ForegroundPositive=rgb(171,233,179)             --green dull
+ForegroundVisited=rgb(201, 203, 255)            --lavender
+
+[Colors:Window]
+BackgroundAlternate=rgb(49,54,59)
+BackgroundNormal=rgb(42,46,50)
+DecorationFocus=rgb(137, 220, 235)              --sky
+DecorationHover=rgb(137, 220, 235)              --sky
+ForegroundActive=rgb(137, 220, 235)             --sky
+ForegroundInactive=rgb(152, 139, 162)           --gray 1
+ForegroundLink=rgb(150, 205, 251)               --blue
+ForegroundNegative=rgb(242,143,173)             --red
+ForegroundNeutral=rgb(248, 189, 150)            --peach
+ForegroundNormal=rgb(252,252,252)               --white
+ForegroundPositive=rgb(171,233,179)             --green dull
+ForegroundVisited=rgb(201, 203, 255)            --lavender
+
+[General]
+ColorScheme=Catppuccin-dev
+Name=Catppuccin-dev
+shadeSortColumn=true
+
+[KDE]
+contrast=4
+
+[WM]
+activeBackground=rgb(49,54,59)
+activeBlend=rgb(252,252,252)                    --white
+activeForeground=rgb(252,252,252)               --white
+inactiveBackground=rgb(42,46,50)
+inactiveBlend=rgb(152, 139, 162)                --gray 1
+inactiveForeground=rgb(152, 139, 162)           --gray 1
