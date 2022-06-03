@@ -9,14 +9,20 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 " Declare the list of plugins.
 Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 Plug 'rrethy/vim-hexokinase', {'do': 'make hexokinase'}
-"Plug 'ap/vim-css-color'
-"Plug 'morhetz/gruvbox'
-"Plug 'tpope/vim-sensible'
-"Plug 'mg979/vim-visual-multi', {'branch': 'master'}
-"Plug 'cohama/lexima.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'rust-lang/rust.vim'
+"Plug 'feline-nvim/feline.nvim'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
 " Config for vim-hexokinase
 let g:Hexokinase_highlighters = ['backgroundfull']
+
+" Config for lightline
+let g:lightline = {'colorscheme': 'catppuccin'}
+
+" Config for rust.vim
+filetype plugin indent on
+
+

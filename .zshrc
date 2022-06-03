@@ -29,6 +29,7 @@ setopt inc_append_history                                       # save commands 
 setopt histignorespace                                          # Don't save commands that start with space
 
 autoload -Uz compinit && compinit                               # Enable auto-completion system
+autoload -Uz colors && colors                                   # Enable colored `less` used in colored-man-pages plugin
 
 zstyle ':completion:*' menu select                              # Autocompletion with menu, press Tab twice to activate
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'       # Case insensitive tab completion
@@ -62,8 +63,27 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
 #source ~/powerlevel10k/powerlevel10k.zsh-theme
-source /usr/share/zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme
+#source /usr/share/zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-colored-man-pages/zsh-colored-man-pages.plugin.zsh
+
+
+################################################################
+#  Functions 
+################################################################
+# using less to open man page with color highlight
+# man() {
+#     LESS_TERMCAP_md=$'\e[01;31m' \
+#     LESS_TERMCAP_me=$'\e[0m' \
+#     LESS_TERMCAP_us=$'\e[01;32m' \
+#     LESS_TERMCAP_ue=$'\e[0m' \
+#     LESS_TERMCAP_so=$'\e[45;93m' \
+#     LESS_TERMCAP_se=$'\e[0m' \
+# 
+#     command man "$@"
+# }
+
 
 ################################################################
 #  Bind keys
@@ -89,19 +109,24 @@ alias rm="rm -I"
 alias lg="lazygit"
 
 # Removing unsed packages (orphans)
-alias autoremove="sudo pacman -Rns $(pacman -Qtdq)"
+alias autoremove='sudo pacman -Rns "$(pacman -Qtdq)"'
 
 # Launch Neovim
 alias v="nvim"
 
-# copy text to clipboard with xclip
+# Copy text to clipboard with xclip
 alias xc="xclip -sel c"
 
+# Launch ani-cli with best quality
+alias ani='ani-cli -q best'
+
 # Launch carla jack
-alias pw-carla="pw-jack carla-rack"
+alias patchbay="pw-jack carla-rack"
 
 # Switch audio to hdmi
 alias audio-hdmi="pactl set-card-profile alsa_card.pci-0000_00_1f.3 output:hdmi-stereo"
 
 # Switch audio to laptop
 alias audio-laptop="pactl set-card-profile alsa_card.pci-0000_00_1f.3 output:analog-stereo+input:analog-stereo"
+
+
