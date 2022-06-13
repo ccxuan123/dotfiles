@@ -1,0 +1,36 @@
+# Replace ls with lsd
+alias ls="lsd"
+alias ll="lsd -lah" 
+#alias ls="ls --color=auto"
+
+alias grep="grep --colour=auto"
+alias egrep="egrep --colour=auto"
+alias fgrep="fgrep --colour=auto"
+
+# Enable prompt when delete or overwrite files
+alias rm="rm -I"
+alias lg="lazygit"
+
+# Launch Neovim
+alias v="nvim"
+
+# Run flatpak for user
+alias fp="flatpak --user"
+
+# Copy text to clipboard with xclip
+alias xc="xclip -sel c"
+
+# Launch ani-cli with best quality
+alias ani='ani-cli -q best'
+
+# Launch carla jack
+alias patchbay="pw-jack carla-rack"
+
+# Switch audio to hdmi
+alias audio-hdmi="pactl set-card-profile alsa_card.pci-0000_00_1f.3 output:hdmi-stereo"
+
+# Switch audio to laptop
+alias audio-laptop="pactl set-card-profile alsa_card.pci-0000_00_1f.3 output:analog-stereo+input:analog-stereo"
+
+# dnf remove old kernels (keep 2) 
+alias clean-kernel='sudo dnf remove "$(dnf repoquery --installonly --latest-limit=-2 -q)"'

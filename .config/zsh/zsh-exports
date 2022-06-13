@@ -1,0 +1,12 @@
+HISTFILE="$HOME"/.local/share/zhistory
+HISTSIZE=10000
+SAVEHIST=10000
+
+# Default text editor
+export EDITOR=/usr/bin/nvim
+export SUDO_EDITOR=/usr/bin/nvim
+
+# Add file/directory to PATH
+export PATH="$HOME/.local/bin":$PATH
+
+#export QT_QPA_PLATFORMTHEME=qt5ct
