@@ -70,7 +70,7 @@ set fileencoding=utf-8
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable catppuccin colorscheme
 " Plug 'catppuccin/nvim', {'as': 'catppuccin'}
-autocmd vimenter * ++nested colorscheme catppuccin
+" autocmd vimenter * ++nested colorscheme catppuccin
 
 " Enables syntax highlighing
 syntax enable
@@ -80,3 +80,12 @@ set cursorline
 
 " Accent color for cursor line highlighting
 hi CursorLine cterm=NONE ctermbg=black
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Functions
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+function! DoPrettyXML()
+    silent %!xmllint --format %
+endfunction
+command! Xmlpp call DoPrettyXML()

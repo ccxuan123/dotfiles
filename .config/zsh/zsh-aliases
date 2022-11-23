@@ -4,15 +4,16 @@ alias ll="lsd -lah"
 #alias ls="ls --color=auto"
 
 alias grep="grep --colour=auto"
-alias egrep="egrep --colour=auto"
-alias fgrep="fgrep --colour=auto"
 
-# Enable prompt when delete or overwrite files
-alias rm="rm -I"
+# Move delete file to trash, require trash-cli and rmtrash
+alias rm='rmtrash'
+alias rmdir='rmdirtrash'
+
 alias lg="lazygit"
-
-# Launch Neovim
 alias v="nvim"
+
+# Launch TLI file manager
+alias rg="ranger"
 
 # Run flatpak for user
 alias fp="flatpak --user"
