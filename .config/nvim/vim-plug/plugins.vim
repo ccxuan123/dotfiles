@@ -10,7 +10,7 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
     Plug 'catppuccin/nvim', {'as': 'catppuccin'}
     Plug 'itchyny/lightline.vim'
     Plug 'rust-lang/rust.vim'
-    Plug 'rrethy/vim-hexokinase', {'do': 'make hexokinase'}
+    " Plug 'rrethy/vim-hexokinase', {'do': 'make hexokinase'}
     Plug 'alvan/vim-closetag'
     "Plug 'feline-nvim/feline.nvim'
 
@@ -27,7 +27,7 @@ EOF
 colorscheme catppuccin
 
 " Config for vim-hexokinase
-let g:Hexokinase_highlighters = ['backgroundfull']
+" let g:Hexokinase_highlighters = ['backgroundfull']
 
 " Config for lightline
 let g:lightline = {'colorscheme': 'catppuccin'}

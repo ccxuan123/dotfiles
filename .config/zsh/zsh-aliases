@@ -6,8 +6,8 @@ alias ll="lsd -lah"
 alias grep="grep --colour=auto"
 
 # Move delete file to trash, require trash-cli and rmtrash
-alias rm='rmtrash'
-alias rmdir='rmdirtrash'
+#alias rm='trash-rm'
+#alias rmdir='mdirtrash'
 
 alias lg="lazygit"
 alias v="nvim"

@@ -43,13 +43,11 @@ zsh_add_file "zsh-exports"
 zsh_add_file "zsh-vim-mode"
 
 # Plugins
-zsh_add_plugin "zsh-users/zsh-autosuggestions"
-zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
-zsh_add_plugin "catppuccin/zsh-syntax-highlighting"
-zsh_add_plugin "bobthecow/git-flow-completion"
 zsh_add_plugin "romkatv/powerlevel10k"
-zsh_add_file "plugins/catppuccin-zsh-syntax-highlighting/catppuccin-zsh-syntax-highlighting.zsh"
 zsh_add_file "plugins/powerlevel10k/powerlevel10k.zsh-theme"  # for source p10k
+zsh_add_plugin "zsh-users/zsh-autosuggestions"
+zsh_add_plugin "bobthecow/git-flow-completion"
+zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
 
 # Key bindings
 bindkey '^[[H' beginning-of-line
