@@ -13,7 +13,7 @@ alias lg="lazygit"
 alias v="nvim"
 
 # Launch TLI file manager
-alias rg="ranger"
+alias fm="ranger"
 
 # Run flatpak for user
 alias fp="flatpak --user"

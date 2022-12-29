@@ -2,6 +2,9 @@
 " => Custom Key Mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""
 
+" Leader key
+let mapleader=","
+
 " Better nav for omnicomplete
 inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")

@@ -39,6 +39,10 @@ set splitbelow
 " Split new window at right
 set splitright
 
+" Enable folding for markdown
+let g:markdown_folding = 1
+au FileType markdown setlocal foldlevel=99
+
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " => Status Line
 """""""""""""""""""""""""""""""""""""""""""""""""""

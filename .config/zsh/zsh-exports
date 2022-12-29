@@ -16,7 +16,9 @@ export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export GOPATH="$XDG_DATA_HOME/go"
 
 export QT_QPA_PLATFORM="wayland"
-export QT_QPA_PLATFORMTHEME="qt5ct"
+export QT_QPA_PLATFORMTHEME="qt6ct"
+export GBM_BACKEND=nvidia-drm
+export __GLX_VENDOR_LIBRARY_NAME=nvidia
 
 HISTFILE="$XDG_CACHE_HOME/zhistory"
 HISTSIZE=10000

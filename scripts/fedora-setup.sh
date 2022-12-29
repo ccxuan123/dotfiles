@@ -21,6 +21,7 @@ options=( \
     "Enhance dnf setting" \
     "System update with dnf" \
     "Enable free and nonfree RPM fusion repo" \
+    "Install media codec" \
     "Enable flathub repo" \
     "Quit" \
 )
@@ -40,13 +41,19 @@ while true; do
                 break
                 ;;
             "Enable free and nonfree RPM fusion repo")
-                echo "Enabling RPM fusion repo"
+                echo "Enabling RPM fusion repo..."
                 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y 
                 break
                 ;;
             "Enable flathub repo")
-                echo "Enabling flathub repo"
+                echo "Enabling flathub repo..."
                 flatpak --user remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+                break
+                ;;
+            "Install media codec")
+                echo "Installing media codec..."
+                sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin -y
+                sudo dnf groupupdate sound-and-video -y
                 break
                 ;;
             "Quit")
