@@ -1,14 +1,6 @@
-""""""""""""""""""""""""""""""""""""""""""""""""""
-" => General Settings
-""""""""""""""""""""""""""""""""""""""""""""""""""
-source $HOME/.config/nvim/general/settings.vim
+source $HOME/.config/nvim/general-config.vim
+source $HOME/.config/nvim/basic-remap.vim
+source $HOME/.config/nvim/custom-func.vim
 
-""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Custom Key Mappings
-""""""""""""""""""""""""""""""""""""""""""""""""""
-source $HOME/.config/nvim/keys/mappings.vim
-
-""""""""""""""""""""""""""""""""""""""""""""""""""
-" =>   vim-plug Plugins
-""""""""""""""""""""""""""""""""""""""""""""""""""
-source $HOME/.config/nvim/vim-plug/plugins.vim
+" --- Plugins ---
+source $HOME/.config/nvim/plugins.vim

@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Script fucntion: To clean up jpg file what without it raw image pair.
+
+# Default to clean up current directory
+dir=$(pwd);
+
+for jpgfile in "$dir"/*.JPG; do
+    # Get the base file name (without the extension)
+    basename="${jpgfile%.*}"
+    # Check if a corresponding ORF file exists
+    if [ ! -f "$basename.ORF" ]; then
+        # If the ORF file does not exist, delete the JPG file
+        rm "$jpgfile"
+        echo "Deleted: $jpgfile"
+    fi
+done

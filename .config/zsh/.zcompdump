@@ -1,4 +1,4 @@
-#files: 1004	version: 5.9
+#files: 1009	version: 5.9
 
 _comps=(
 '-' '_precommand'
@@ -158,6 +158,7 @@ _comps=(
 'calendar' '_calendar'
 'cat' '_cat'
 'catchsegv' '_precommand'
+'catimg' '_catimg'
 'cc' '_gcc'
 'ccal' '_ccal'
 'cd' '_cd'
@@ -1269,6 +1270,8 @@ _comps=(
 'scl' '_scl'
 'scons' '_scons'
 'scp' '_ssh'
+'scrcpy' '_scrcpy'
+'scrcpy.exe' '_scrcpy'
 'screen' '_screen'
 'script' '_script'
 'scriptreplay' '_script'
@@ -1453,6 +1456,7 @@ _comps=(
 'todo' '_devtodo'
 'todo.sh' '_todo.sh'
 'toilet' '_toilet'
+'toolbox' '_toolbox'
 'top' '_top'
 'totdconfig' '_totd'
 'touch' '_touch'
@@ -1641,6 +1645,8 @@ _comps=(
 'whom' '_mh'
 'wiggle' '_wiggle'
 'wipefs' '_wipefs'
+'wl-copy' '_wl-copy'
+'wl-paste' '_wl-paste'
 'wodim' '_cdrecord'
 'wpa_cli' '_wpa_cli'
 'write' '_users_on'
@@ -1881,14 +1887,15 @@ bindkey '^[,' _history-complete-newer
 bindkey '^[/' _history-complete-older
 bindkey '^[~' _bash_complete-word
 
-autoload -Uz _bluetoothctl _bootctl _busctl _bwrap _coredumpctl \
-            _curl _firewalld _flatpak _hg _hostnamectl \
-            _journalctl _kernel-install _libinput _localectl _loginctl \
-            _machinectl _mercurial _mpv _networkctl _oomctl \
-            _podman _resolvectl _sd_hosts_or_user_at_host _sd_machines _sd_outputmodes \
-            _sd_unit_files _systemctl _systemd _systemd-analyze _systemd-delta \
-            _systemd-inhibit _systemd-nspawn _systemd-path _systemd-run _systemd-tmpfiles \
-            _timedatectl _udevadm _yt-dlp _a2ps _a2utils \
+autoload -Uz _bluetoothctl _bootctl _busctl _bwrap _catimg \
+            _coredumpctl _curl _firewalld _flatpak _hg \
+            _hostnamectl _journalctl _kernel-install _libinput _localectl \
+            _loginctl _machinectl _mercurial _mpv _networkctl \
+            _oomctl _podman _resolvectl _scrcpy _sd_hosts_or_user_at_host \
+            _sd_machines _sd_outputmodes _sd_unit_files _systemctl _systemd \
+            _systemd-analyze _systemd-delta _systemd-inhibit _systemd-nspawn _systemd-path \
+            _systemd-run _systemd-tmpfiles _timedatectl _toolbox _udevadm \
+            _wl-copy _wl-paste _yt-dlp _a2ps _a2utils \
             _aap _abcde _absolute_command_paths _ack _acpi \
             _acpitool _acroread _adb _add-zle-hook-widget _add-zsh-hook \
             _alias _aliases _all_labels _all_matches _alsa-utils \
