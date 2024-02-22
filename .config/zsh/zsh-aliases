@@ -1,6 +1,6 @@
 # Replace ls with lsd
-alias ls="lsd"
-alias ll="lsd -lah" 
+#alias ls="lsd"
+#alias ll="lsd -lah" 
 #alias ls="ls --color=auto"
 
 alias grep="grep --colour=auto"

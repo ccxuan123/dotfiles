@@ -15,10 +15,13 @@ export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export GOPATH="$XDG_DATA_HOME/go"
 
-export QT_QPA_PLATFORM="wayland"
-export QT_QPA_PLATFORMTHEME="qt6ct"
+#export QT_QPA_PLATFORM="wayland"
+#export QT_QPA_PLATFORMTHEME="qt6ct"
 export GBM_BACKEND=nvidia-drm
 export __GLX_VENDOR_LIBRARY_NAME=nvidia
+
+export SPOTIPY_CLIENT_ID="9c305d37273e4013979372fdb89813ee"
+export SPOTIPY_CLIENT_SECRET="07fb7a293f8646c18d7774f9784720f0"
 
 export RANGER_LOAD_DEFAULT_RC="FALSE"
 
@@ -33,5 +36,3 @@ export SUDO_EDITOR=/usr/bin/nvim
 # Specify location for less history
 LESSHISFILE="$XDG_CACHE_HOME/less/history"
 
-
-#export QT_QPA_PLATFORMTHEME=qt5ct

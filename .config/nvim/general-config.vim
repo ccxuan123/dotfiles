@@ -6,13 +6,15 @@ set backspace=indent,eol,start      " Configure backspace to work like normal
 set hlsearch
 set scrolloff=8
 set wildmenu
-set clipboard=unnamed,unnamedplus   " Enable copy to system clipboard with xclip
+set clipboard+=unnamedplus   " Enable copy to system clipboard with xclip
 set hidden
 set nobackup
 set noswapfile
 set splitbelow
 set splitright
 set laststatus=2                    " Always display the status line
+set nocompatible
+filetype plugin on
 
 " Enable folding for markdown
 let g:markdown_folding = 1
