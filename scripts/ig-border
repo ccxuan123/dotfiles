@@ -1,12 +1,16 @@
-#!/bin/sh
+#!/bin/bash
 
-# Add white border to make square image
+# Add white border to make square image or 5:4 image
 
 # Convert single image file, replace `test.jpg` with desire file
 # convert test.jpg -set filename:f "%[t]_sq_border" -resize 1040x1040 -background white -gravity center -extent 1080x1080 -quality 100 "%[filename:f].jpg"
 
 # Convert all image file in the folder
 for file in "$PWD/*"; do
-    convert $file -set filename:f "%[t]_sq_border" -resize 1040x1040 -background white -gravity center -extent 1080x1080 -quality 100 "%[filename:f].jpg"
-    echo $file
+    # Output 1080x1080 square image with white border
+    # convert $file -set filename:f "%[t]_sq_border" -resize 1040x1040 -background white -gravity center -extent 1080x1080 -quality 100 "%[filename:f].jpg"
+
+    # Output 5:4 aspect image with white border
+    magick $file -set filename:f "%[t]_sq_border" -resize 1040x1040 -background white -gravity center -extent 1080x1350 -quality 100 "%[filename:f].jpg"
+    echo "added border to $file"
 done
