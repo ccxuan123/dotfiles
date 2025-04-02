@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#create output directory
+mkdir -p "resized-photo"
+
+
+# Convert all image file in the folder
+for file in $PWD/*.jpg $PWD/*.JPG; do
+	# Resize the image to 1280x960 (4:3 aspect ratio)
+	convert "$file" -resize 1280x960\! "resized-photo/%[filename:f].jpg"
+	
+	echo "Image has been stretched to 4:3 and saved as resized-photo/%[filename:f].jpg"
+done
