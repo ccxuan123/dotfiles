@@ -202,6 +202,7 @@ require('lazy').setup({
       -- Document existing key chains
       spec = {
         { '<leader>s', group = '[S]earch', mode = { 'n', 'v' } },
+        { '<leader>o', group = '[O]sidian', mode = { 'n', 'v' } },
         { '<leader>t', group = '[T]oggle' },
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
       },
@@ -490,25 +491,46 @@ require('lazy').setup({
     'obsidian-nvim/obsidian.nvim',
     version = '*',
     --ft = 'markdown',
+    -- event = "VeryLazy",
     opts = {
-      legacy_commands = false, -- this will be removed in the next major release
+      legacy_commands = false,
       workspaces = {
         {
           name = "personal",
+          -- force the workspace root as neovim current working directory
           path = "~/Documents/obsidian-vault",
         },
       },
       ui = { enable = true },
-      templates = {
-         folder = "~/Documents/obsidian-vault/.templates",
-         date_format = "%Y-%m-%d-%a",
-         time_format = "%H:%M",
-      },
+      -- create new note with user specify filename. Otherwise fallback to auto generated id code
+      note_id_func = function(title)
+        if title ~= nil then
+          -- convert title to filename-safe slug
+          return title
+            :gsub(" ", "-")
+            :gsub("[^A-Za-z0-9-]", "")
+            :lower()
+        else
+          -- fallback if no title provided
+          return tostring(os.time())
+        end
+      end,
     },
+    --config = function(_, opts)
+    --  local obsidian = require("obsidian")
+    --  obsidian.setup(opts)
+    --  vim.api.nvim_create_user_command("Vault", function()
+    --    vim.cmd("Obsidian workspace personal")
+    --    local vault = obsidian.get_client().dir
+    --    vim.cmd("cd " .. vault)
+    --    vim.cmd("edit dashboard.md")
+    --  end, {})
+    --end,
     -- obsidian custom keymap
     keys = {
       { '<leader>on', '<cmd>Obsidian new<CR>', desc = '[O]bsidian [N]ote', mode = 'n'},
       { '<leader>os', '<cmd>Obsidian search<CR>', desc = '[O]bsidian [S]earch', mode = 'n'},
+      { '<leader>oh', '<cmd>Obsidian help<CR>', desc = '[O]bsidian [H]elp', mode = 'n'},
     }, 
   },
 

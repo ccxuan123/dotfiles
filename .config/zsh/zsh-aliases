@@ -37,5 +37,6 @@ alias audio-laptop="pactl set-card-profile alsa_card.pci-0000_00_1f.3 output:ana
 alias clean-kernel='sudo dnf remove "$(dnf repoquery --installonly --latest-limit=-2 -q)"'
 
 # Launch nvim to open obsidian dashboard
-alias note='nvim ~/Documents/obsidian-vault/init-vault.md'
+alias note='nvim ~/Documents/obsidian-vault/dashboard.md'
+# alias note='nvim -c "Vault"'
 
