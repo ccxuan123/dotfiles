@@ -490,7 +490,7 @@ require('lazy').setup({
   { -- Obsidian nvim support plugin
     'obsidian-nvim/obsidian.nvim',
     version = '*',
-    --ft = 'markdown',
+    ft = 'markdown',
     -- event = "VeryLazy",
     opts = {
       legacy_commands = false,
